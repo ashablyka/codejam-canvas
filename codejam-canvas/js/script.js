@@ -6216,31 +6216,44 @@ const picture32 = [
     ]
 ];
 
-let can = document.getElementById('can');
-can.width = 512;
-can.height = 512;
-let ctx = can.getContext('2d');
+let can = document.querySelector('#canvas');
+canvas.width = 512;
+canvas.height = 512;
+let ctx = canvas.getContext('2d');
 ctx.fillStyle = "rgb(120, 120, 120)"
-ctx.fillRect(0, 0, 256, 256);
+ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-let scale4 = 512 / 4;
-let scale32 = 512 /32
+const size4 = document.querySelector('#size4');
+const size32 = document.querySelector('#size32');
+const sizeImage = document.querySelector('#image');
 
-for (let i = 0; i < picture4.length; i++) {
-    for (let j = 0; j < picture4[i].length; j++) {
-        ctx.fillStyle = `#${picture4[i][j]}`;
-        ctx.fillRect(j * scale4, i * scale4, scale4, scale4);
+const scale4 = 512 / 4;
+const scale32 = 512 / 32;
+
+size4.addEventListener('click', draw4);
+size32.addEventListener('click', draw32);
+
+function draw4() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (let i = 0; i < picture4.length; i++) {
+        for (let j = 0; j < picture4[i].length; j++) {
+            ctx.fillStyle = `#${picture4[i][j]}`;
+            ctx.fillRect(j * scale4, i * scale4, scale4, scale4);
+        }
     }
 }
 
-/*for (let i = 0; i < picture32.length; i++) {
-    for (let j = 0; j < picture32[i].length; j++) {
-        ctx.fillStyle = `rgba(${picture32[i][j][0]}, ${picture32[i][j][1]},
-            ${picture32[i][j][2]},
-            ${picture32[i][j][3] / 256}`;
-        ctx.fillRect(j * scale32, i * scale32, scale32, scale32);
+function draw32() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (let i = 0; i < picture32.length; i++) {
+        for (let j = 0; j < picture32[i].length; j++) {
+            ctx.fillStyle = `rgba(${picture32[i][j][0]}, ${picture32[i][j][1]},
+                ${picture32[i][j][2]},
+                ${picture32[i][j][3] / 256}`;
+            ctx.fillRect(j * scale32, i * scale32, scale32, scale32);
+        }
     }
-}*/
+}
 
 
 
