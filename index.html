@@ -5,40 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>CodeJam Canvas</title>
 </head>
 
 <body>
-    <header class="header">
-        <div class="menu"></div>
-        <h1 class="heading">CodeJam - Pallete</h1>
-        <div class="aside-menu"></div>
-    </header>
-    <main>
-        <div class="controls">
-            <div class="tools">
-                <ul class="color-tools">
-                    <li class="color-tools__item">Paint bucket</li>
-                    <li class="color-tools__item">Choose color</li>
-                </ul>
-                <ul class="move-tools">
-                    <li class="move-tools__item">Move</li>
-                    <li class="move-tools__item">Transform</li>
-                </ul>
+    <div class="wrapper">
+        <header class="header">
+            <div class="menu"></div>
+            <h1 class="heading">CodeJam - Pallete</h1>
+            <div class="aside-menu"></div>
+        </header>
+        <main class="main">
+            <div class="controls">
+                <div class="tools panel">
+                    <ul class="color-tools">
+                        <li class="color-tools__bucket item">Paint bucket</li>
+                        <li class="color-tools__color item">Choose color</li>
+                    </ul>
+                    <ul class="move-tools">
+                        <li class="move-tools__move item">Move</li>
+                        <li class="move-tools__transform item">Transform</li>
+                    </ul>
+                </div>
+                <div class="colors-panel  panel">
+                    <ul class="color-history">
+                        <li class="color-history__current item">Current color</li>
+                        <li class="color-history__prev item">Prev color</li>
+                    </ul>
+                    <ul class="colors-picker">
+                        <li class="colors-picker__red item">red</li>
+                        <li class="colors-picker__blue item">blue</li>
+                    </ul>
+                </div>
             </div>
-            <div class="colors-panel">
-                <ul class="color-history">
-                    <li class="color-history__item">Current color</li>
-                    <li class="color-history__item">Prev color</li>
-                </ul>
-                <ul class="colors-picker">
-                    <li class="colors-picker__item">red</li>
-                    <li class="colors-picker__item">blue</li>
-                </ul>
-            </div>
-        </div>
-        <canvas id="canvas" class="canvas"></canvas>
-    </main>
+            <canvas id="canvas" class="canvas"></canvas>
+        </main>
+    </div>
 </body>
 
 </html>
