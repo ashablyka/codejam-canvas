@@ -6216,4 +6216,33 @@ const picture32 = [
     ]
 ];
 
+let can = document.getElementById('can');
+can.width = 512;
+can.height = 512;
+let ctx = can.getContext('2d');
+ctx.fillStyle = "rgb(120, 120, 120)"
+ctx.fillRect(0, 0, 256, 256);
+
+let scale4 = 512 / 4;
+let scale32 = 512 /32
+
+for (let i = 0; i < picture4.length; i++) {
+    for (let j = 0; j < picture4[i].length; j++) {
+        ctx.fillStyle = `#${picture4[i][j]}`;
+        ctx.fillRect(j * scale4, i * scale4, scale4, scale4);
+    }
+}
+
+/*for (let i = 0; i < picture32.length; i++) {
+    for (let j = 0; j < picture32[i].length; j++) {
+        ctx.fillStyle = `rgba(${picture32[i][j][0]}, ${picture32[i][j][1]},
+            ${picture32[i][j][2]},
+            ${picture32[i][j][3] / 256}`;
+        ctx.fillRect(j * scale32, i * scale32, scale32, scale32);
+    }
+}*/
+
+
+
+
 
