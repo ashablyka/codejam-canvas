@@ -6223,14 +6223,25 @@ let ctx = canvas.getContext('2d');
 ctx.fillStyle = "rgb(120, 120, 120)"
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
+const sizes = document.querySelector('.sizes');
 const size4 = document.querySelector('#size4');
 const size32 = document.querySelector('#size32');
 
 const scale4 = 512 / 4;
 const scale32 = 512 / 32;
 
-size4.addEventListener('click', draw4);
-size32.addEventListener('click', draw32);
+sizes.addEventListener('click', (event) => {
+    switch (event.target.id) {
+        case 'size4':
+            draw4();
+            break;
+        case 'size32':
+            draw32();
+            break;
+        default:
+            break;
+    }
+})
 
 function draw4() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
