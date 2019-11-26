@@ -6225,14 +6225,12 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 const size4 = document.querySelector('#size4');
 const size32 = document.querySelector('#size32');
-const pic = document.querySelector('#image');
 
 const scale4 = 512 / 4;
 const scale32 = 512 / 32;
 
 size4.addEventListener('click', draw4);
 size32.addEventListener('click', draw32);
-pic.addEventListener('click', drawPic);
 
 function draw4() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -6255,18 +6253,3 @@ function draw32() {
         }
     }
 }
-
-/*function drawPic() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    let img = new Image();
-    img.src = '../img/image.png';
-    img.onload = start;
-    function start() {
-        ctx.drawImage(img, 0, 0);
-    }
-}*/
-
-
-
-
-
