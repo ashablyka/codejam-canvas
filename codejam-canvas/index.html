@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>CodeJam Canvas</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="menu"></div>
+            <h1 class="heading">CodeJam - Pallete</h1>
+            <div class="aside-menu"></div>
+        </header>
+        <main class="main">
+            <div class="controls">
+                <div class="tools panel">
+                    <ul class="color-tools">
+                        <li class="color-tools__bucket item">Paint bucket</li>
+                        <li class="color-tools__color item">Choose color</li>
+                    </ul>
+                    <ul class="move-tools">
+                        <li class="move-tools__move item">Move</li>
+                        <li class="move-tools__transform item">Transform</li>
+                    </ul>
+                </div>
+                <div class="colors-panel  panel">
+                    <ul class="color-history">
+                        <li class="color-history__current item">Current color</li>
+                        <li class="color-history__prev item">Prev color</li>
+                    </ul>
+                    <ul class="colors-picker">
+                        <li class="colors-picker__red item">red</li>
+                        <li class="colors-picker__blue item">blue</li>
+                    </ul>
+                </div>
+                <div class="panel">
+                    <ul class="sizes">
+                        <li id="size4" class="item">4*4</li>
+                        <li id="size32" class="item">32*32</li>
+                        <li id="image" class="item">Image</li>
+                    </ul>
+                </div>
+            </div>
+            <canvas id="canvas" class="canvas"></canvas>
+        </main>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
